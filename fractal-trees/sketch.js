@@ -1,5 +1,4 @@
-// Constants my guy
-var slider;                   // Depth of fractal tree
+var slider;
 var angle;
 
 function setup() {
@@ -7,26 +6,26 @@ function setup() {
   slider = createSlider(0, TWO_PI, PI / 8, 0.01);
 }
 
+
 function draw() {
-  background(50); // not shitty grey
-  angle = slider.value();
-  stroke(255);
 
-  push();
-  translate(windowWidth / 4, height);
-  branch(100);
-  pop();
+  background(50);               // not shitty grey
+  angle = slider.value();       // get angle from slider
+  stroke(255);                  // stroke is white
 
-  push();
-  translate(windowWidth / 2, height);
-  branch(100);
-  pop();
+  var MID_X = windowWidth / 2;
+  var MID_Y = (windowHeight - 200) / 2;
+  var START_LEN = 120;
 
-  push();
-  translate(3 * windowWidth / 4, height);
-  branch(100);
-  pop();
+  var angles = [-PI / 2, PI / 2, PI, 0];  // rotation angles for the 4 trees
 
+  angles.forEach(function (angle) {
+    push();
+    translate(MID_X, MID_Y);
+    rotate(angle);
+    branch(START_LEN);
+    pop();
+  });
 }
 function branch(length) {
   line(0, 0, 0, -length);
