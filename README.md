@@ -3,4 +3,4 @@
 
 ## Fractal Trees
 
-![screenshot](https://github.com/osc-jaimes/p5-art/blob/main/fractal-trees/fractal_tree.png)
+![screenshot](https://github.com/oscjaimes/p5-art/blob/main/fractal-trees/fractal_tree.png)
