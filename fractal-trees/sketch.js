@@ -6,7 +6,6 @@ function setup() {
   slider = createSlider(0, TWO_PI, PI / 8, 0.01);
 }
 
-
 function draw() {
 
   background(50);               // not shitty grey
